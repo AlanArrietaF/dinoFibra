@@ -238,3 +238,21 @@
                 border-bottom: var(--border-style);
             }
         }
+	/* Sección El Mejor Cereal */
+	.banner-mejor-cereal {
+	    padding: 80px 20px;
+	    text-align: center;
+	    border-bottom: var(--border-style);
+	    background-color: var(--bg-color);
+	}
+
+	.banner-mejor-cereal h2 {
+	    font-size: 4rem;
+	    letter-spacing: 2px;
+	    margin-bottom: 10px;
+	}
+
+	.banner-mejor-cereal p {
+	    font-size: 1.5rem;
+	    font-family: var(--font-clean);
+	}
