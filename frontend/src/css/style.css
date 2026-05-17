@@ -1,0 +1,240 @@
+:root {
+            --bg-color: #fcf66c;       /* Amarillo característico del diseño */
+            --text-color: #50121a;     /* Tono oscuro para las letras y bordes */
+            --border-style: 1px solid #50121a;
+            --font-retro: 'VT323', monospace;
+            --font-clean: 'Share Tech Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-clean);
+            overflow-x: hidden;
+        }
+
+        /* --- NAVBAR --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: var(--border-style);
+            font-size: 1.2rem;
+        }
+
+        nav .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            text-transform: uppercase;
+        }
+
+        /* --- MARQUESINA (Ticker de Nuevos Productos) --- */
+        .marquee {
+            width: 100%;
+            border-bottom: var(--border-style);
+            background-color: var(--bg-color);
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 10px 0;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .marquee-content span {
+            margin-right: 50px;
+        }
+
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: var(--border-style);
+            position: relative;
+        }
+
+        .hero h1 {
+            font-family: var(--font-retro);
+            font-size: 5rem;
+            line-height: 1;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .hero-img-container {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* --- GRID DE INGREDIENTES / ENTRIES --- */
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-item {
+            border-right: var(--border-style);
+            border-bottom: var(--border-style);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 300px;
+            position: relative;
+        }
+
+        /* Quitar el borde derecho al último elemento de la fila */
+        .ingredients-grid .grid-item:nth-child(3n) {
+            border-right: none;
+        }
+
+        .item-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+        }
+
+        .item-image {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin: 20px 0;
+        }
+
+        .item-footer {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+        }
+
+        .arrow-icon {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* --- SECCIÓN PRODUCTO PRINCIPAL O TABLA NUTRIMENTAL --- */
+        .details-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: var(--border-style);
+        }
+
+        .details-block {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .details-block:first-child {
+            border-right: var(--border-style);
+        }
+
+        .details-section h2 {
+            font-family: var(--font-retro);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* --- FOOTER / ABOUT --- */
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            width: 60px;
+            margin-bottom: 20px;
+        }
+
+        footer h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin: 10px 0;
+        }
+
+        footer ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- RESPONSIVO (MOBILE) --- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .ingredients-grid {
+                grid-template-columns: 1fr; /* Una sola columna en móvil */
+            }
+
+            .ingredients-grid .grid-item {
+                border-right: none; /* En móvil todos pierden el borde derecho */
+            }
+
+            .details-section {
+                grid-template-columns: 1fr;
+            }
+
+            .details-block:first-child {
+                border-right: none;
+                border-bottom: var(--border-style);
+            }
+        }
