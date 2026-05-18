@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Dinofibra | Tabla Nutrimental</title>
+    <style>
+        /* Estilos específicos para la tabla nutrimental */
+        .tabla-container {
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--bg-color);
+        }
+
+        .nutrition-label {
+            background-color: #fff; /* Fondo blanco para que parezca etiqueta real */
+            color: #000;
+            border: 3px solid #000;
+            padding: 20px;
+            width: 100%;
+            max-width: 650px; /* Un poco más ancha para las 3 columnas */
+            font-family: 'Arial', sans-serif; 
+        }
+
+        .nutrition-label h1 {
+            font-family: var(--font-retro);
+            font-size: 3.5rem;
+            margin-bottom: 5px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 6px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .porcion-info {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 6px solid #000;
+            padding-bottom: 10px;
+        }
+
+        .porcion-info p {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
+
+        .nutrition-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .nutrition-table th, 
+        .nutrition-table td {
+            padding: 8px 5px;
+            border-bottom: 1px solid #000;
+            font-size: 1.1rem;
+        }
+
+        .nutrition-table th {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .nutrition-table th.center,
+        .nutrition-table td.center {
+            text-align: center;
+        }
+
+        /* Líneas más gruesas para separar secciones clave */
+        .thick-line {
+            border-bottom: 4px solid #000 !important;
+        }
+        
+        .indent {
+            padding-left: 20px !important;
+            font-weight: normal;
+        }
+
+        .ingredientes-section {
+            border-top: 6px solid #000;
+            padding-top: 15px;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .ingredientes-section p {
+            margin-bottom: 10px;
+        }
+
+        .sello-fibra {
+            border: 2px solid #000;
+            border-radius: 10px 10px 10px 10px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            float: right;
+            text-transform: uppercase;
+        }
+        
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Home :-)</a></div>
+        <div class="nav-links">
+            <a href="index.html#ingredientes">Ingredientes</a>
+            <a href="tabla.html">Tabla Nutrimental</a>
+            <a href="index.html#ingredientes">Productos</a>
+            <a href="about.html">About Me</a>
+        </div>
+    </nav>
+
+    <main class="tabla-container">
+        <h2 style="margin-bottom: 30px; font-size: 3rem; color: var(--text-color);">TABLA NUTRIMENTAL</h2>
+
+        <div class="nutrition-label">
+            <h1>Declaración Nutrimental</h1>
+            
+            <div class="header-info">
+                <span>Contenido energético por envase:</span>
+                <span>1 768 kcal (7 430 kJ)</span>
+            </div>
+
+            <div class="porcion-info">
+                <p><span>Tamaño de la porción:</span> <span>55 g</span></p>
+                <p><span>Porciones por envase:</span> <span>8</span></p>
+            </div>
+            
+            <table class="nutrition-table">
+                <thead>
+                    <tr class="thick-line">
+                        <th>Nutrimento</th>
+                        <th class="center">Por 100 g</th>
+                        <th class="center">Por porción (55 g)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="thick-line">
+                        <th>Contenido energético</th>
+                        <td class="center">402 kcal<br>(1 685 kJ)</td>
+                        <td class="center">221 kcal<br>(927 kJ)</td>
+                    </tr>
+                    <tr>
+                        <th>Proteínas</th>
+                        <td class="center">18 g</td>
+                        <td class="center">10 g</td>
+                    </tr>
+                    <tr>
+                        <th>Grasas totales</th>
+                        <td class="center">11 g</td>
+                        <td class="center">6 g</td>
+                    </tr>
+                    <tr>
+                        <th class="indent">Grasas saturadas</th>
+                        <td class="center">3 g</td>
+                        <td class="center">1.6 g</td>
+                    </tr>
+                    <tr>
+                        <th class="indent">Grasas <i>trans</i></th>
+                        <td class="center">0 g</td>
+                        <td class="center">0 g</td>
+                    </tr>
+                    <tr>
+                        <th>Hidratos de carbono disponibles</th>
+                        <td class="center">48 g</td>
+                        <td class="center">26 g</td>
+                    </tr>
+                    <tr>
+                        <th class="indent">Azúcares</th>
+                        <td class="center">8 g</td>
+                        <td class="center">4 g</td>
+                    </tr>
+                    <tr class="thick-line">
+                        <th>Fibra dietética</th>
+                        <td class="center">16 g</td>
+                        <td class="center">9 g</td>
+                    </tr>
+                    <tr>
+                        <th>Sodio</th>
+                        <td class="center">210 mg</td>
+                        <td class="center">116 mg</td>
+                    </tr>
+                    <tr>
+                        <th>Vitamina E</th>
+                        <td class="center">9 mg</td>
+                        <td class="center">5 mg</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="ingredientes-section">
+                <p><strong>INGREDIENTES:</strong> Cereal extruido proteico de soya y chícharo, harina de quinoa entera y maíz seleccionado, inulina de achicoria pura, plátano maduro deshidratado en polvo, almendras fileteadas, coco rallado seco, canela molida, vainilla natural, premezcla micronizada y vitamina E.</p>
+                
+                <div class="sello-fibra">
+                    <span style="font-size: 1.2rem;">Alto en<br>Fibra</span><br>
+                    <span style="font-size: 0.8rem; font-weight: normal;">Fuente de<br>Proteína Vegetal</span>
+                </div>
+
+                <p><strong>CONTIENE: SOYA Y ALMENDRA.</strong></p>
+                <p><strong>PUEDE CONTENER: CACAHUATE, NUEZ, TRIGO Y LECHE.</strong></p>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </main>
+
+    </body>
+</html>
