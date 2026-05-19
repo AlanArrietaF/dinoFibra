@@ -193,6 +193,49 @@
 	    font-size: 1.5rem;
 	    font-family: var(--font-clean);
 	}
+/* --- SECCIÓN UBICACIÓN (about.html) --- */
+        .ubicacion-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: var(--border-style);
+            background-color: var(--bg-color);
+        }
+
+        .ubicacion-text {
+            padding: 40px;
+            border-right: var(--border-style);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .ubicacion-text h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .ubicacion-text p {
+            font-size: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .ubicacion-mapa {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff; /* Fondo blanco detrás del mapa para enmarcarlo */
+        }
+
+        .ubicacion-mapa iframe {
+            width: 100%;
+            height: 350px;
+            border: 3px solid var(--text-color); /* Borde grueso retro */
+
+            /* TRUCO RETRO: Desatura el mapa para que parezca impreso/antiguo */
+            filter: grayscale(80%) contrast(1.2) sepia(20%); 
+        }
 
 /* --- RESPONSIVO (MOBILE) --- */
         @media (max-width: 768px) {
@@ -253,6 +296,15 @@
             }
 
             .details-block:first-child {
+                border-right: none;
+                border-bottom: var(--border-style);
+            }
+/* Ajustes para Ubicación en móvil */
+            .ubicacion-section {
+                grid-template-columns: 1fr;
+            }
+
+            .ubicacion-text {
                 border-right: none;
                 border-bottom: var(--border-style);
             }
