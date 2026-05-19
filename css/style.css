@@ -175,45 +175,6 @@
             margin-bottom: 20px;
         }
 
-        /* --- FOOTER / ABOUT --- */
-        footer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .footer-logo {
-            width: 60px;
-            margin-bottom: 20px;
-        }
-
-        footer h3 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        footer ul {
-            list-style: none;
-        }
-
-        footer ul li {
-            margin: 10px 0;
-        }
-
-        footer ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 1.6rem;
-            text-transform: uppercase;
-        }
-
-        footer ul li a:hover {
-            text-decoration: underline;
-        }
-
 	/* Sección El Mejor Cereal */
 	.banner-mejor-cereal {
 	    padding: 80px 20px;
@@ -233,16 +194,50 @@
 	    font-family: var(--font-clean);
 	}
 
-        /* --- RESPONSIVO (MOBILE) --- */
-        /* 2. CORRECCIÓN: El media query ahora sí abarca SOLO lo de celulares y está al final */
+/* --- RESPONSIVO (MOBILE) --- */
         @media (max-width: 768px) {
+            /* 1. ARREGLO DEL NAVBAR */
             nav {
                 flex-direction: column;
-                gap: 10px;
+                padding: 15px 10px;
+            }
+
+            nav .nav-links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin-top: 15px;
+                gap: 12px; /* Espacio uniforme entre enlaces */
+            }
+
+            nav .nav-links a {
+                margin: 0;
+                width: 100%;
+                text-align: center;
+                padding-bottom: 5px;
+                border-bottom: 1px dashed var(--text-color); /* Un detalle retro para separarlos */
+            }
+
+            nav .nav-links a:last-child {
+                border-bottom: none; /* Quita la línea del último elemento */
+            }
+
+            .hero {
+                background-size: 500px; 
+                padding: 60px 20px 80px; 
             }
 
             .hero h1 {
-                font-size: 3.5rem;
+                font-size: 5rem; /* Ajustamos "DINOFIBRA" para que no se desborde */
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .banner-mejor-cereal h2 {
+                font-size: 3rem; 
             }
 
             .ingredients-grid {
@@ -261,4 +256,4 @@
                 border-right: none;
                 border-bottom: var(--border-style);
             }
-        } /* <--- Aquí está la llave que faltaba para cerrar el modo móvil */
+        }
