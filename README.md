@@ -1,6 +1,6 @@
 #  Dinofibra - Web Oficial
 
-Proyecto frontend multipágina para **Dinofibra**, una marca mexicana de cereal funcional diseñado para mejorar la salud digestiva y metabólica. El sitio web destaca por su estilo visual retro/brutalista, alto contraste y navegación intuitiva.
+Proyecto frontend multipágina para **Dinofibra**, una marca mexicana de cereal funcional diseñado para mejorar la salud digestiva y metabólica. El sitio web destaca por su estilo visual retro/brutalista, alto contraste y navegación intuitiva. Puedes ver la pàgina en https://alanarrietaf.github.io/dinoFibra/ .
 
 ##  Sobre el Proyecto
 
